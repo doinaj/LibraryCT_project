@@ -1,6 +1,7 @@
 Feature: Add Users
   User story: As a librarian i should be able to add users from users page
 
+  @addUsers
   Scenario Outline: Librarian adds new users
     Given Librarian is logged into the library and it's on the dashboard
     When Librarian click's on Users module
@@ -13,5 +14,6 @@ Feature: Add Users
     Then Librarian verifies "<full name>" is in the list
 
     Examples:
-    |full name|password|email|full name|
-    |Nikola Lale|bezgaje|opremDobro@dodz.com|Nikola lale|
+      | full name    | password  | email               | full name    |
+      | Nikola Lale  | bezgaa1je | ospremDobro@dodz.com | Nikola Lale  |
+      | Bata Mladjko | fgazgajee | sudzakSator@dodz.com | Bata Mladjko |
