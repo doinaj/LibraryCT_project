@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
+import java.util.Locale;
+
 public class Login_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
@@ -27,8 +29,20 @@ public class Login_StepDefinition {
     }
 
 
+    @Given("I open {string} page")
+    public void iOpenPage(String page) {
 
+        switch (page.toLowerCase(Locale.ROOT)) {
+            case "library":
+                loginPage.open();
+                break;
+            default:
+                throw new RuntimeException("undefined page");
+        }
+    }
 
-
-
+    @Then("User login as {string}")
+    public void userLoginAs(String user) {
+       loginPage.loginAs(user);
+    }
 }

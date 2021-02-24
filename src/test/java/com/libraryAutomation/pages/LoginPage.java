@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage{
 
+    public LoginPage() {
+        url = ConfigurationReader.getProperty("url");
+    }
 
     @FindBy(id="inputEmail")
     public WebElement inputEmailBox;
@@ -18,6 +21,9 @@ public class LoginPage extends BasePage{
     public WebElement signInButton;
     @FindBy(xpath = "//div[@class='alert alert-danger']")
     public WebElement errorMessage;
+
+
+
     public void login(String username, String password){
         LoginPage loginPage = new LoginPage();
         loginPage.inputEmailBox.sendKeys(username);
