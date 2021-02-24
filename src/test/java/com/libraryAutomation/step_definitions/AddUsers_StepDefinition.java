@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddUsers_StepDefinition {
@@ -57,7 +58,7 @@ WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
     public void librarian_verifies_is_in_the_list(String string) {
         BrowserUtils.sleep(3);
         String actualNameInTheTable = addUsersPage.lastNameInTable.getText();
-        Assert.assertTrue(actualNameInTheTable.equals(string));
+        Assert.assertEquals(actualNameInTheTable, string);
     }
 
 
