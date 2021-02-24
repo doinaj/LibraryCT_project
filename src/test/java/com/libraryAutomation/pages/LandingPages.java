@@ -15,13 +15,12 @@ public class LandingPages extends BasePage{
 
 
 
-    public void verifyModules(List<String> expectedModules){
+    public void verifyModules(List <String> expectedModules){
       List<String> modulesElementText= BrowserUtils.getElementText(links);
 
       Assert.assertEquals(expectedModules,modulesElementText);
 
         }
-
-    }
+}
 
 
