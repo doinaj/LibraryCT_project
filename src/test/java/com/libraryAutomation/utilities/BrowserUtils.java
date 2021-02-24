@@ -40,6 +40,13 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions
                 .presenceOfAllElementsLocatedBy(By.xpath(xpath)));
     }
+    public static List<String> getElementText(List<WebElement> list) {
+        List<String> textList = new ArrayList<>();
+        for (WebElement each : list) {
+            textList.add(each.getText());
+        }
+        return textList;
+    }
     public static void clickElement(WebElement element){
         waitUntilClickable(element).click();
     }
