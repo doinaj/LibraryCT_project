@@ -26,4 +26,14 @@ public class AddUsersPage extends BasePage {
     @FindBy(xpath = "//tbody/tr[1]/td[3]")
     public WebElement lastNameInTable;
 
+
+
+    @FindBy(xpath = "//tbody//tr[1]//td[1]")
+    public WebElement editUserButton;
+
+    @FindBy(xpath = "//button[@class='btn default']")
+    public WebElement closeButton;
+
+    @FindBy(xpath = "//h3[.='User Management']")
+    public WebElement userDashboardHeader;
 }

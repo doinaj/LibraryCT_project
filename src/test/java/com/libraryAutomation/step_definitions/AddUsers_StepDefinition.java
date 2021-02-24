@@ -1,5 +1,6 @@
 package com.libraryAutomation.step_definitions;
 
+import com.github.javafaker.Faker;
 import com.libraryAutomation.pages.AddUsersPage;
 import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.utilities.BrowserUtils;
@@ -14,6 +15,7 @@ public class AddUsers_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
     AddUsersPage addUsersPage = new AddUsersPage();
+    Faker faker = new Faker();
 
 
     @Given("Librarian is logged into the library and it's on the dashboard")
@@ -43,11 +45,12 @@ public class AddUsers_StepDefinition {
     }
     @When("Enters {string} to email")
     public void enters_to_email(String string) {
-        addUsersPage.emailInput.sendKeys(string);
+        addUsersPage.emailInput.sendKeys(faker.internet().emailAddress());
     }
     @When("Click's on the Save Changes button")
     public void click_s_on_the_save_changes_button() {
         addUsersPage.saveChangesButton.click();
+        BrowserUtils.sleep(2);
     }
     @Then("Librarian verifies {string} is in the list")
     public void librarian_verifies_is_in_the_list(String string) {
