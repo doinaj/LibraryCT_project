@@ -10,13 +10,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddUsers_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
     AddUsersPage addUsersPage = new AddUsersPage();
     Faker faker = new Faker();
-
+WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
 
     @Given("Librarian is logged into the library and it's on the dashboard")
     public void librarian_is_logged_into_the_library_and_it_s_on_the_dashboard() {
