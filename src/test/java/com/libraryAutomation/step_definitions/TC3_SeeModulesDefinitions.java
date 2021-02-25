@@ -5,6 +5,7 @@ import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 
 import java.util.List;
 
@@ -23,8 +24,7 @@ public class TC3_SeeModulesDefinitions {
     @Then("the user should see following modules")
     public void the_user_should_see_following_modules(List<String> modules) {
         landingPages.verifyModules(modules);
-        Driver.closeDriver();
 
-
+       // Driver.closeDriver();
     }
 }

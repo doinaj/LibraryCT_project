@@ -11,7 +11,7 @@ import java.util.List;
 public class LandingPages extends BasePage{
 
     @FindBy(xpath = "//ul[@id='menu_item']//li//a")
-    public List<WebElement> links;
+    public List<WebElement> allModulesLinks;
 
     @FindBy(xpath = "//a[@href='#books']")
     public WebElement booksLink;
@@ -34,11 +34,25 @@ public class LandingPages extends BasePage{
 
 
     public void verifyModules(List <String> expectedModules){
-      List<String> modulesElementText= BrowserUtils.getElementText(links);
+      List<String> modulesElementText= BrowserUtils.getElementText(allModulesLinks);
 
       Assert.assertEquals(expectedModules,modulesElementText);
 
         }
+
+
+/*
+    public void verifyModules(List<String> expectedModules){
+        List<String> actualModules=new ArrayList<>();
+        for(WebElement element:links){
+            actualModules.add(element.getText());
+        }
+        Assert.assertTrue(actualModules.equals(expectedModules));
+    }
+
+ */
+
+
 }
 
 

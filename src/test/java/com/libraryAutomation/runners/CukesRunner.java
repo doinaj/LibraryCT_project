@@ -15,8 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryAutomation/step_definitions",
         dryRun = false,
-        tags = "@LibrarianTableHeaders"
-
+        tags = "@wip"
 )
 public class CukesRunner {
 }
