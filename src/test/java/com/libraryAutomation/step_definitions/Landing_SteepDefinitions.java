@@ -21,8 +21,8 @@ public class Landing_SteepDefinitions {
 
     @And("User verify that default record is {int}")
     public void userVerifyThatDefaultRecordIs(int count) {
-        String selectedByDefauilt = new Select(landingPage.selectRecords).getFirstSelectedOption().getText();
-        Assert.assertEquals(count + "", selectedByDefauilt);
+        String selectedByDefault = new Select(landingPage.selectRecords).getFirstSelectedOption().getText();
+        Assert.assertEquals(count + "", selectedByDefault);
     }
 
     @And("User verify that show record for {string}options")
