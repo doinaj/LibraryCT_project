@@ -2,9 +2,9 @@ Feature: Librarian, I should be able to see
   book records on user page
 
   Background:
-    Given I open "Library" page
+    Given User open "Library" page
 
-  Scenario Outline:
+  Scenario Outline: Scenaroi 1
     Then User login as "librarian"
     And User click on the "Books" module
     And User verify that default record is 10
@@ -16,3 +16,9 @@ Feature: Librarian, I should be able to see
       | 15    |
       | 50    |
       | 100   |
+
+
+  Scenario:
+    Then User login as "librarian"
+    And User click on the "Books" module
+    And User verify that default record is 10

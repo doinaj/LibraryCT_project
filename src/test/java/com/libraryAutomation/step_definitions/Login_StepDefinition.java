@@ -33,7 +33,7 @@ public class Login_StepDefinition {
     }
 
 
-    @Given("I open {string} page")
+    @Given("User open {string} page")
     public void iOpenPage(String page) {
 
         switch (page.toLowerCase(Locale.ROOT)) {
