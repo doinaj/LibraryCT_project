@@ -15,6 +15,8 @@ public class SearchPage extends LoginPage {
     @FindBy(xpath = "//*[@id=\"book_categories\"]/option[1]")
     public WebElement allBooks;
 
+    // hjkjgxkjgvkjxvjkxc
+
     @FindBy(xpath = "//*[@id=\"book_categories\"]/option[2]")
     public WebElement firstBooks;
     @FindBy(xpath = "//*[@id=\"book_categories\"]/option[3]")
