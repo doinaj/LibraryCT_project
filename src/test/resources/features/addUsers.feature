@@ -3,7 +3,7 @@
 Feature: Add Users
   User story: As a librarian i should be able to add users from users page
 
-  @addUsers
+  @addUsers @smoke
   Scenario Outline: Librarian adds new users
     Given Librarian is logged into the library and it's on the dashboard
     When Librarian click's on Users module
