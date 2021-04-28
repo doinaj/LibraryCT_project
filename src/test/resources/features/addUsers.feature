@@ -1,4 +1,4 @@
-@sveee
+@MiniRegresion
 
 Feature: Add Users
   User story: As a librarian i should be able to add users from users page
